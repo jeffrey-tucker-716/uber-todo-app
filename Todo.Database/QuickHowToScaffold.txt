@@ -1,0 +1,22 @@
+﻿I know this is like a silent movie, but the essentials are here.
+https://www.youtube.com/watch?v=TdmfoNlJwtQ
+
+Make a new class library that deals with data access alone.  Use the class library dot net core template.
+I have a database first design because it helps me deal with the database modeling in a separate tool like SSMS or some relational modeller.
+The database I have is called Todo.
+
+Set the class library as default for the solution (for now).  
+Open the nuget package manager.
+Install Microsoft.EntityFrameworkCore.SqlServer (3.1.3 latest)
+Microsoft.EntityFrameworkCore.Tools (3.1.3 latest)
+
+Open the Package Manager Console; set the Default Project to the name of your class library.
+
+Issue the command Scaffold-DbContext "Server=.;Database=Todo;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+You should get something like this:
+
+PM> Scaffold-DbContext "Server=.;Database=Todo;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Build started...
+Build succeeded.
+PM>

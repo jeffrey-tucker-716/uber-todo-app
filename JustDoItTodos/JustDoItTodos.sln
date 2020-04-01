@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustDoItTodos", "JustDoItTodos.csproj", "{863D63A2-422D-4D96-B4FF-D2E5B3D34F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustDoItTodos", "JustDoItTodos.csproj", "{863D63A2-422D-4D96-B4FF-D2E5B3D34F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Database", "..\Todo.Database\Todo.Database.csproj", "{211C12C4-BE86-4EC3-9F87-6219A568F444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{863D63A2-422D-4D96-B4FF-D2E5B3D34F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863D63A2-422D-4D96-B4FF-D2E5B3D34F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863D63A2-422D-4D96-B4FF-D2E5B3D34F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211C12C4-BE86-4EC3-9F87-6219A568F444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211C12C4-BE86-4EC3-9F87-6219A568F444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211C12C4-BE86-4EC3-9F87-6219A568F444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211C12C4-BE86-4EC3-9F87-6219A568F444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
