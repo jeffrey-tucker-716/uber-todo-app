@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Todo.Database.Models
 {
-    public partial class TodoItems
+    public partial class TodoItem
     {
-        public TodoItems()
+        public TodoItem()
         {
-            RememberItems = new HashSet<RememberItems>();
+            RememberItems = new HashSet<RememberItem>();
         }
 
         public string TodoItemId { get; set; }
@@ -16,6 +16,6 @@ namespace Todo.Database.Models
         public DateTime WhenEntered { get; set; }
         public DateTime? WhenCompleted { get; set; }
 
-        public virtual ICollection<RememberItems> RememberItems { get; set; }
+        public virtual ICollection<RememberItem> RememberItems { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace JustDoItTodos.Models
+namespace JustDoItToDos
 {
     public class WeatherForecast
     {

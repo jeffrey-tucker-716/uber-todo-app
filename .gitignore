@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Todo.Services/obj
+/Todo.Database.Tests/obj
+/Queries.Core.Repositories/bin/Debug/netcoreapp3.1
+/Queries.Core.Repositories/obj
+/Todo.Database.Tests/bin/Debug/netcoreapp3.1
+/Todo.Services/bin/Debug/netcoreapp3.1
+/.vs/JustDoItTodos

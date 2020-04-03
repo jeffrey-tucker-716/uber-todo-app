@@ -15,21 +15,24 @@ namespace Todo.Database.Models
         {
         }
 
-        public virtual DbSet<RememberItems> RememberItems { get; set; }
-        public virtual DbSet<TodoItems> TodoItems { get; set; }
+        public virtual DbSet<RememberItem> RememberItems { get; set; }
+        public virtual DbSet<TodoItem> TodoItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.;Database=Todo;Trusted_Connection=True;");
+                // Startup.cs will already have configured the context
+                // public void ConfigureServices(IServiceCollection services) 
+                // { services.AddDbContext<TodoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TodoDatabase")));
+                // the below snippet is only for unit testing.
+                optionsBuilder.UseSqlServer("Server=.;Database=EFProviders.InMemory;Trusted_Connection=True;ConnectRetryCount=0");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<RememberItems>(entity =>
+            modelBuilder.Entity<RememberItem>(entity =>
             {
                 entity.HasKey(e => e.RememberItemId);
 
@@ -53,7 +56,7 @@ namespace Todo.Database.Models
                     .HasConstraintName("FK_RememberItems_TodoItems");
             });
 
-            modelBuilder.Entity<TodoItems>(entity =>
+            modelBuilder.Entity<TodoItem>(entity =>
             {
                 entity.HasKey(e => e.TodoItemId);
 
